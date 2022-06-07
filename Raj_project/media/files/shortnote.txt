@@ -1,0 +1,12 @@
+Mixins : Mixins extends class functionality
+namespace: memory block where names are mapped to objects. class namespace, instance namespace
+iterable:  __iter__(), __getitem()__  function definded
+iterator:	next method defined
+Generator:	Generator are simple way of creating iterator
+			use yiels instead of return
+				# A simple generator function
+				def my_gen():
+					n = 1
+					print('This is printed first')
+					# Generator function contains yield statements
+					yield n

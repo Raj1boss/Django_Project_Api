@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Home Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Welcome {{user}}!</h1>
+{{user.email}} <a href="/logout"><button>logout</button></a>
+
+<br><br>
+<div class="contaiiner">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>USERNAME</td>
+                <td>EMAIL</td>
+                <td>FILE</td>
+                <td>Download</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i.user.username}}</td>
+                <td>{{i.user.email}}</td>
+                <td>{{i.file}}</td>
+                <td><a href="media/{{i.file}}" download><button class="btn btn-primary">Download</button></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
